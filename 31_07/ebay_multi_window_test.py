@@ -34,6 +34,7 @@ for handle in list_of_handles :
 driver.switch_to.window(new_handle)
 print(driver.title)
 driver.switch_to.window(main_handler)
+driver.save_screenshot('screen1.png')
 item2 = driver.find_element(By.CSS_SELECTOR , '#srp-river-results > ul > li:nth-child(3) > div > div.s-item__image-section > div > a > div > img')
 item2.click()
 
@@ -46,5 +47,7 @@ for handle in list_of_handles :
 driver.switch_to.window(new_handle)
 print(driver.title)
 
+def test_1():
+    assert 1==2
 time.sleep(2)
 driver.quit()
