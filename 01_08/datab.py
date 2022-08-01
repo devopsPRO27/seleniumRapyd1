@@ -3,13 +3,13 @@ import mysql.connector
 
 class DBcon:
 
-    def __init__(self, data):
+    def __init__(self, database):
         try:
             self.conn = mysql.connector.connect(
                 host='localhost',
                 user='root',
                 password="Hothaifa1!",
-                database=data
+                database=database
             )
         except:
             print('404')
